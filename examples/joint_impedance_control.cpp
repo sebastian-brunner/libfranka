@@ -9,6 +9,7 @@
 #include <mutex>
 #include <thread>
 
+#include <franka/control_types.h>
 #include <franka/duration.h>
 #include <franka/exception.h>
 #include <franka/model.h>
@@ -101,7 +102,7 @@ int main(int argc, char** argv) {
 
   try {
     // Connect to robot.
-    franka::Robot robot(argv[1]);
+    franka::Robot robot(argv[1], franka::RealtimeConfig::kIgnore);
     setDefaultBehavior(robot);
 
     // First move the robot to a suitable joint configuration

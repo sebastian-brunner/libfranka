@@ -25,7 +25,7 @@ int main(int argc, char** argv) {
     return -1;
   }
   try {
-    franka::Robot robot(argv[1]);
+    franka::Robot robot(argv[1], franka::RealtimeConfig::kIgnore);
     setDefaultBehavior(robot);
 
     std::array<double, 7> q_goal;

@@ -126,7 +126,7 @@ int main(int argc, char** argv) {
   Controller controller(filter_size, K_P, K_D);
 
   try {
-    franka::Robot robot(argv[1]);
+    franka::Robot robot(argv[1], franka::RealtimeConfig::kIgnore);
     setDefaultBehavior(robot);
 
     // First move the robot to a suitable joint configuration

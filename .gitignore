@@ -6,3 +6,6 @@ install*/
 *.user
 .cache
 .env
+.cursor
+.aria
+ar-intelligent-assistant

@@ -46,6 +46,7 @@ set(EXAMPLES
   generate_joint_velocity_motion_external_control_loop
   grasp_object
   joint_impedance_control
+  joint_impedance_control_simple
   joint_point_to_point_motion
   motion_with_control
   motion_with_control_external_control_loop
@@ -63,6 +64,7 @@ foreach(example ${EXAMPLES})
 endforeach()
 
 target_link_libraries(joint_impedance_control Threads::Threads pinocchio::pinocchio)
+target_link_libraries(joint_impedance_control_simple Threads::Threads)
 target_link_libraries(motion_with_control Poco::Foundation)
 target_link_libraries(motion_with_control_external_control_loop Poco::Foundation)
 
